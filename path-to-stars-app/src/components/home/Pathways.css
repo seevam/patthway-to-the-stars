@@ -1,0 +1,67 @@
+.pathways {
+  padding: var(--space-2xl) 0;
+  background: linear-gradient(180deg, transparent, rgba(79, 195, 247, 0.05), transparent);
+}
+
+.pathways-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-xl);
+}
+
+.pathway-card {
+  text-align: center;
+  min-height: 400px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.pathway-title {
+  font-size: var(--font-size-2xl);
+  margin-bottom: var(--space-md);
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.age-badge {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: var(--gradient-primary);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-sm);
+  font-weight: bold;
+  color: white;
+  margin-bottom: var(--space-md);
+}
+
+.pathway-description {
+  color: var(--text-secondary);
+  margin-bottom: var(--space-lg);
+  font-size: var(--font-size-base);
+}
+
+.pathway-features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+.pathway-features li {
+  padding: var(--space-xs) 0;
+  color: var(--text-secondary);
+  font-size: var(--font-size-sm);
+}
+
+@media (max-width: 768px) {
+  .pathways-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pathway-card {
+    min-height: auto;
+  }
+}
